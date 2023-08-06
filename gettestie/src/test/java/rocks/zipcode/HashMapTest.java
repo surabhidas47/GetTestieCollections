@@ -38,15 +38,29 @@ public class HashMapTest {
     }
 
     @Test
-    public void contains(){
+    public void containsKey(){
 
         hashmap.put("surabhi",12);
         hashmap.put("surb",14);
         hashmap.put("surby",17);
 
+        Boolean expected =hashmap.containsKey("surb");
 
+        Assert.assertTrue(expected);
 
-        Assert.assertTrue(hashmap.containsKey("surb"));
+    }
+
+    @Test
+    public void containsValue(){
+
+        hashmap.put("surabhi",12);
+        hashmap.put("surb",14);
+        hashmap.put("surby",17);
+
+        int expected =hashmap.get("surb");
+        int actual = 14;
+
+        Assert.assertEquals(expected,actual);
 
     }
 
